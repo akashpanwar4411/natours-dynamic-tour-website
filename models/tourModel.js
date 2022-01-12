@@ -163,20 +163,12 @@ tourSchema.pre('save', function(next){
     this.slug = slugify(this.name, {lower: true});
     next();
 });
-// tourSchema.pre('save', function(next){
-//     console.log('...will save document');
+
+
+// tourSchema.post(/^find/, function(docs, next){
+//     console.log(`Query take ${Date.now() - this.start} miliseconds!`);
 //     next();
 // });
-
-// tourSchema.post('save', function(doc, next){
-//     console.log(doc);
-//     next();
-// });
-
-tourSchema.post(/^find/, function(docs, next){
-    console.log(`Query take ${Date.now() - this.start} miliseconds!`);
-    next();
-});
 
 // AGGREGATION MIDDLEWARE
 // Commenting this because section 11: Geospatial aggregtion: calculating distance 

@@ -7,6 +7,7 @@ const mongoSanitize = require('express-mongo-sanitize');
 const xss = require('xss-clean');
 const hpp = require('hpp');
 const cookieParser = require('cookie-parser');
+const compression = require('compression'); // for compressing text/json responses
 
 const AppError = require('./utils/appError');
 const globalErrorHandler = require('./controller/errorController');
@@ -85,6 +86,9 @@ app.use((req, res, next)=> {
     "default-src  * https://* ;base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src * data:;object-src 'none';script-src * blob: ;script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests;");
     next();
 });
+
+// for compressing responses
+app.use(compression());
 
 // Test Middleware
 app.use((req, res, next)=>{
