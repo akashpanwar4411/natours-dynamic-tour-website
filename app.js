@@ -41,7 +41,7 @@ app.use(cors());
  }));
 */
 // cors for request like PATCH, PUT, DELETE
-app.option('*', cors());
+app.options('*', cors());
 // app.option('/api/v1/tours/:id', cors()); // restricting to this route only
 
 
