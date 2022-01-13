@@ -18,6 +18,7 @@ const reviewRouter = require('./routes/reviewRoute');
 const viewRouter = require('./routes/viewRoute');
 const bookingRouter = require('./routes/bookingRoute');
 const bookingController = require('./controller/bookingController');
+const viewController = require('./controller/viewController');
 
 // Start express app
 const app = express();
