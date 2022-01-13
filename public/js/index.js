@@ -39,7 +39,7 @@ if(formUserData){
         form.append('name', document.getElementById('name').value);
         form.append('email', document.getElementById('email').value);
         form.append('photo', document.getElementById('photo').files[0]);
-        console.log(form);
+        // console.log(form);
         updateSettings(form, 'data');
     });
 }
@@ -56,7 +56,6 @@ if(formUserPassword){
         
         await updateSettings({passwordCurrent, passwordConfirm, password}, 'password');
         
-        console.log('working');
         document.querySelector('.password-submit-btn').textContent = 'SAVE PASSWORD';
         document.getElementById('password-current').value = '';
         document.getElementById('password-confirm').value = '';
