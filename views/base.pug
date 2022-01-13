@@ -11,7 +11,7 @@ html
         link(href='https://fonts.googleapis.com/css?family=Lato:300,300i,700' rel='stylesheet')
         link(rel='shortcut icon' type='image/png' href='/img/favicon.png' )
         title Natours | #{title}
-    body
+    body(data-alert=`${alert ? alert : ''}`)
       // HEADER
       include _header
 

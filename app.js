@@ -121,6 +121,7 @@ app.use((req, res, next)=>{
     next();
 });
 
+app.use(viewController.alert);
 
 // Mounting Router
 app.use('/api/v1/users', userRouter); // mounting router
