@@ -20,7 +20,7 @@ router.get('/my-tours',
 router.post('/update-user-data', authController.protect ,viewController.updateUser);
 
 router.get('/', 
-    bookingController.createBookingCheckout,
+    // bookingController.createBookingCheckout,
     authController.isLoggedIn,
     viewController.getOverview
 );

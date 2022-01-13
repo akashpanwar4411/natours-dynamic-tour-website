@@ -42,7 +42,7 @@ process.on('unhandledRejection', err => { // unhandledRejection Event
  });
 });
 
-
+// For Heroku Dynamo Restart
 process.on('SIGTERM', ()=>{
     console.log('👋 SIGTERM RECEIVED. Shutting down gracefully');
     server.close(()=>{
