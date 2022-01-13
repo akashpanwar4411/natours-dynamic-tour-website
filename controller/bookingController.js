@@ -54,13 +54,17 @@ exports.getCheckoutSession = catchAsync(async (req, res, next) =>{
 //     res.redirect(req.originalUrl.split('?')[0]);
 // });
 
-const createBookingCheckout = catchAsync(async (session, next) =>{
-    console.log(session);
-    const tour = session.client_reference_id;
-    const user = (await User.findOne({email: session.customer_email}) )._id;
-    const price = session.data.object.amount_total / 100;
-    await Booking.create({tour, user, price});
-});
+const createBookingCheckout = async (session, next) =>{
+    try{
+
+        const tour = session.client_reference_id;
+        const user = (await User.findOne({email: session.customer_email}) )._id;
+        const price = session.amount_total / 100;
+        await Booking.create({tour, user, price});
+    }catch(err){
+        console.log(`🥶 Error`, err.message);
+    }
+};
 
 exports.webhookCheckout = (req, res, next) =>{
     const signature = req.headers['stripe-signature'];
