@@ -65,7 +65,11 @@ if(process.env.NODE_ENV === 'development'){
     app.use(morgan('dev'));
 }
 
-app.use('/webhook-checkout', express.raw(), bookingController.webhookCheckout);
+app.use(
+    '/webhook-checkout', 
+    express.raw({type: 'application/json'}), 
+    bookingController.webhookCheckout
+    );
 
 // Body Parser, reading data from the body into req.body
 app.use(express.json({ limit: '10kb' })); // middle where that can modify the request data
