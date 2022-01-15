@@ -1,3 +1,4 @@
+import mapboxgl from "mapbox-gl";
 export const displayMap = (locations) => {
     mapboxgl.accessToken = 'pk.eyJ1Ijoicm9hc3QwMDA3IiwiYSI6ImNreHd2aWJpYjQ4cXcycXFrY2docnQwbWUifQ.9bZDxE23j9biBwyuPb0tew';
     var map = new mapboxgl.Map({
@@ -29,6 +30,7 @@ export const displayMap = (locations) => {
         // Add popup
         new mapboxgl.Popup({
             offset: 30,
+            focusAfterOpen: false
         })
         .setLngLat(loc.coordinates)
         .setHTML(`<p>Day ${loc.day}: ${loc.description}</p>`)
