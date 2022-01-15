@@ -1315,3 +1315,58 @@ body {
   -webkit-transform: translateY(-2px);
   transform: translateY(-2px);
 }
+
+/* Responsiveness for Mobile */
+@media only screen and (max-width: 500px){
+  /* Overview Section Start */
+  body{
+      padding: 1rem;
+  }
+  /* Header */
+  .header__logo img {
+      height: 33px;
+      margin-top: 22px;
+  }
+  .nav--tours {
+      margin-bottom: 0;
+      margin-left: -302px;
+      margin-top: -47px;
+  }
+  .nav--user{
+      margin-left: 292px;
+      margin-top: -42px;
+  }
+  .nav--user a:nth-child(1){
+      margin-right:-23px;
+  }
+  .nav--user a:nth-child(2){
+      margin-top: -2px;
+  }
+  .nav__user-img {
+      height: 3.2rem;
+      width: 3.2rem;
+      border-radius: 50%;
+      margin-right: 1rem;
+      margin-bottom: 2px;
+  }
+
+  /* Overview Content */
+  .main{
+      padding: 3rem 3.8rem;
+  }
+  .card-container {
+      /* grid-template-columns: repeat(1, 1fr); */
+      grid-template-columns: 325px;
+      grid-gap: 2rem;
+  }
+
+  /* Footer */
+  .footer{
+      grid-template-columns: 1fr;
+      grid-row-gap: 1.25rem;
+      justify-items: center;
+      padding: 2rem 4rem 3rem 3rem;
+  }
+
+  /* Overview Section Start */
+}
