@@ -1359,8 +1359,12 @@ body {
       margin-top: -9px !important;
       margin-left: 18px;
   }
-
-  /* Overview Content */
+  .nav__el--cta:hover{
+    background-color: #f7f7f700;
+        color: #fff;
+        text-shadow: none;
+  }
+  /* Content */
   .main{
       padding: 3rem 3.8rem;
   }
@@ -1378,5 +1382,79 @@ body {
       padding: 2rem 4rem 3rem 3rem;
   }
 
-  /* Overview Section Start */
+  /* Overview Section Ends */
+
+  /* Tour Sections Starts*/
+  .section-header{
+      height: 60vw;
+  }
+  .heading-box{
+      width: 71vw;
+  }
+  .heading-primary{
+      font-size: 2.5rem;
+  }
+  .heading-primary span{
+      line-height: 2;
+  }
+  .section-description{
+      flex-direction: column;
+  }
+  .overview-box__group:not(:last-child) {
+      margin-bottom: 2rem;
+  }
+  .ma-bt-lg{
+      margin-bottom: 1.5rem !important;
+  }
+  .overview-box__detail:not(:last-child) {
+      margin-bottom: 1.25rem;
+  }
+  .description-box h1{
+      margin-top: -35px;
+  }
+  .section-map{
+      height: 50rem;
+  }
+  .reviews{
+      grid-column-gap: 2rem;
+  }
+  .reviews__card{
+      width: 27rem;
+      padding: 2rem;
+  }
+
+  .section-pictures{
+      display: grid;
+  }
+  .picture-box__img--3{
+      padding-bottom: 9%;
+      margin-top: -28px;
+  }
+
+  .section-cta{
+      padding-bottom: 2rem;
+      padding-top: 5rem;
+      padding-left: 0;
+      padding-right: 0;
+  }
+  .cta__content{
+      grid-template-columns: 1fr;
+      grid-auto-flow: row;
+      margin-left:-31px;
+      row-gap: -1px;
+  }
+  .heading-secondary{
+      font-size: 15px;
+  }
+  .cta button{
+      padding: 6px 0px;
+  }
+  .cta__text{
+      font-size: 11px;
+  }
+  .cta__img{
+      height: 13rem;
+      width: 13rem;
+  }
+  /* Tour Sections Ends*/
 }
