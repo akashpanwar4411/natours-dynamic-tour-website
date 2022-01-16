@@ -3,7 +3,6 @@ import { showAlert } from "./alert";
 
 export const signup = async userData =>{
     try{
-        console.log(userData);
         const res = await axios({
             method: 'POST',
             url: '/api/v1/users/signup',
@@ -15,7 +14,6 @@ export const signup = async userData =>{
             }
         });
 
-        console.log(res);
         if(res.data.status === 'success'){
             showAlert('success', 'Signup Successfull!');
             window.setTimeout(()=>{
