@@ -1473,4 +1473,11 @@ body {
       margin: 6rem 65px;
   }
   /* Account Section Ends */
+
+  /*Login Section Starts*/
+  .login-form{
+    padding: 5rem 3rem;
+    margin-top:33px;
+  }
+  /*Login Section Ends*/
 }

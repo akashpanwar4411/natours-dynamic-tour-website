@@ -4,6 +4,7 @@ import {displayMap} from './mapbox';
 import { updateSettings } from './updateSettings';
 import { bookTour } from './stripe';
 import { showAlert } from './alert';
+import { signup } from './signup';
 
 
 // DOM ELEMENTS
@@ -14,9 +15,10 @@ const formUserData = document.querySelector('.form-user-data');
 const formUserPassword = document.querySelector('.form-user-password');
 const bookTourBtn = document.getElementById('book-tour');
 const alertMessage = document.querySelector('body').dataset.alert;
+const signupForm = document.querySelector('.form--signup');
 
 // DELEGATION 
-if(alertMessage) showAlert('success', alertMessage, 10);
+if(alertMessage) showAlert('success', alertMessage, 10); // showing alert using dataset in base.pug body
 
 if(mapBox){
     const locations = JSON.parse(mapBox.dataset.location);
@@ -30,6 +32,18 @@ if(loginForm){
         const email = document.getElementById('email').value;
         const password = document.getElementById('password').value;
         login(email, password);
+    });
+}
+
+if(signupForm){
+    signupForm.addEventListener('submit', e =>{
+        e.preventDefault();
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        const passwordConfirm = document.getElementById('passwordConfirm').value;
+
+        signup({name, email, password, passwordConfirm});
     });
 }
 
