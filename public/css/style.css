@@ -1459,18 +1459,18 @@ body {
   /* Tour Sections Ends*/
 
   /* Account Section Starts */
-
- .main{
-     padding: 3rem 0;
- }
- .user-view__menu{
-     flex: 0 0 0;
- }
- .user-view__content{
-     margin-left: -60px;
- }
- .line{
-     margin: 6rem 65px;
- }
+  .user-view{
+      margin-left: -37px;
+      margin-right: -38px;
+  }
+  .user-view__menu{
+      flex: 0 0 0;
+  }
+  .user-view__content{
+      margin-left: -60px;
+  }
+  .line{
+      margin: 6rem 65px;
+  }
   /* Account Section Ends */
 }
